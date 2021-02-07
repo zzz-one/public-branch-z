@@ -43,8 +43,7 @@ def test002_IsChinese() :
                 tips=tips+c
         if tips:
             # print("文本的第%s行:"%i,one_f,"包含非中文字符"+tips)旧式字符串格式化
-            # print("文本的第%s行:%s包含非中文字符%s"%(i,one_f,tips))
-            print("文本的第%s行:%s包含非中文字符%s"%i%one_f%tips)
+            print("文本的第%s行:%s包含非中文字符%s"%(i,one_f,tips))
         i=i+1
 
 def test03_error_test():
