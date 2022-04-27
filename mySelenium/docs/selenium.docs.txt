@@ -1,0 +1,39 @@
+1.重定义options
+chrome_options = Options()
+self.driver = webdriver. Chrome (options=chrome_options)
+    -指定端口浏览器
+    chrome_options. debugger_address = "localhost:9222"
+    -指定浏览器app
+    __browser_url = r'/Applications/360Chrome.app/Contents/MacOS/360Chrome'  ##360浏览器的地址
+    chrome_options.binary_location = __browser_url
+2.选区元素
+base_driver.find_element(by,value)返回第一个
+base_driver.find_elements(by,value)返回所有符合参数的条件
+    -class标签
+    (By.CSS_SELECTOR,".index _service cnt_itemwrap:nth-child(1)")
+        -第一，class要取最后一个空格之后的内容
+        -第二，去多个或者只有1个就不用nth，指定第几就要:nth-child(1数字索引)
+    -id标签
+    (By.ID,"memberAdd_acctid")
+    -元素方法
+    .send_keys（""）
+    .click()
+3.读取cookie
+cookies = self.driver.get.cookies()
+    -写入文件
+    cookies=main.bese_get_cookie()
+    print(cookies)
+    with open("cookie.json", "w") as f:
+        json.dump(cookies,f)#（value，file）
+    -读取文件
+            self.base_driver.get(self._dr_url)#get打开网址（先打开目标页，不然cookie可能注入失败）
+            cookies = json.load(open(os.getcwd()+"/get_cookie/cookie.json"))#load读取json从上级文件夹的xxx
+            for cookie in cookies:
+                # print(cookie)
+                if 'expiry' in cookie:#驱动版本bug（新版本的chromedrive拒绝了"expiry value"（到期密钥）。因为新版chromedriver要求expiry value为int64，而之前可以为double。这应该算是一个版本更新中的Bug。）
+                    del cookie['expiry']
+                self.base_driver.add_cookie(cookie)#addCookie加载一个字典
+            self.base_driver.get(self._dr_url)#get打开网站（相当于刷新）
+
+5.等待
+self.driver. implicitly_wait (3)

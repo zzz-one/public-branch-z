@@ -1,0 +1,42 @@
+#?
+#    - complexkey1
+#    - complexkey2
+#:
+#    - complexvalue1
+#    - complexvalue2
+#
+
+#全字典可以
+#tesr: 123
+#tesr1:
+#  tesr1: 123
+#全数组
+#- 1，2，3
+#- str
+#-
+#    - s1
+#    - s2
+#- [1,2,3,str]
+#数组套字典可以
+#-
+#  test:
+#    tesr: 123
+#    tesr1: 123
+#-
+#  tesr: 123
+#  tesr1: 123
+#字典套数组
+number:
+    - [1,2,3,test]
+    - 1
+    -
+        - 1
+        - 2
+        - 3
+        - test
+    -
+        number1:
+            - 1
+            - [1,2,3]
+number2:
+            - [1,2,3]

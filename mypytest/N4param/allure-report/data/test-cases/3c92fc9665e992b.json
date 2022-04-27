@@ -1,0 +1,61 @@
+{
+  "uid" : "3c92fc9665e992b",
+  "name" : "test_a[数字number2]",
+  "fullName" : "test_param#test_a",
+  "historyId" : "70baab01b2f2d9932f83aeaad2cc27b8",
+  "time" : {
+    "start" : 1649900772059,
+    "stop" : 1649900772059,
+    "duration" : 0
+  },
+  "status" : "passed",
+  "flaky" : false,
+  "newFailed" : false,
+  "newBroken" : false,
+  "newPassed" : false,
+  "retriesCount" : 0,
+  "retriesStatusChange" : false,
+  "beforeStages" : [ ],
+  "afterStages" : [ ],
+  "labels" : [ {
+    "name" : "suite",
+    "value" : "test_param"
+  }, {
+    "name" : "host",
+    "value" : "zzzs-MacBook-Air.local"
+  }, {
+    "name" : "thread",
+    "value" : "76813-MainThread"
+  }, {
+    "name" : "framework",
+    "value" : "pytest"
+  }, {
+    "name" : "language",
+    "value" : "cpython3"
+  }, {
+    "name" : "package",
+    "value" : "test_param"
+  }, {
+    "name" : "resultFormat",
+    "value" : "allure2"
+  } ],
+  "parameters" : [ {
+    "name" : "a",
+    "value" : "1"
+  }, {
+    "name" : "b",
+    "value" : "2"
+  }, {
+    "name" : "c",
+    "value" : "33"
+  } ],
+  "links" : [ ],
+  "hidden" : true,
+  "retry" : true,
+  "extra" : {
+    "categories" : [ ],
+    "tags" : [ ]
+  },
+  "source" : "3c92fc9665e992b.json",
+  "parameterValues" : [ "1", "2", "33" ]
+}

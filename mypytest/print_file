@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="utf-8"?><testsuites><testsuite name="pytest" errors="0" failures="1" skipped="0" tests="3" time="0.019" timestamp="2022-04-12T15:49:45.305277" hostname="zzzs-MacBook-Air.local"><testcase classname="test_py1.TestMy" name="test_add1" time="0.000"><failure message="assert 3 == 4&#10; +  where 4 = &lt;bound method Calculator.add of &lt;beTest.calculator.Calculator object at 0x10680dbe0&gt;&gt;(1, 3)&#10; +    where &lt;bound method Calculator.add of &lt;beTest.calculator.Calculator object at 0x10680dbe0&gt;&gt; = &lt;beTest.calculator.Calculator object at 0x10680dbe0&gt;.add&#10; +      where &lt;beTest.calculator.Calculator object at 0x10680dbe0&gt; = &lt;test_py1.TestMy object at 0x10680d760&gt;.cal">self = &lt;test_py1.TestMy object at 0x10680d760&gt;
+
+    @pytest.mark.add
+    def test_add1(self):
+        # cal = Calculator()
+&gt;       assert 3==self.cal.add(1,3)
+E       assert 3 == 4
+E        +  where 4 = &lt;bound method Calculator.add of &lt;beTest.calculator.Calculator object at 0x10680dbe0&gt;&gt;(1, 3)
+E        +    where &lt;bound method Calculator.add of &lt;beTest.calculator.Calculator object at 0x10680dbe0&gt;&gt; = &lt;beTest.calculator.Calculator object at 0x10680dbe0&gt;.add
+E        +      where &lt;beTest.calculator.Calculator object at 0x10680dbe0&gt; = &lt;test_py1.TestMy object at 0x10680d760&gt;.cal
+
+test_py1.py:13: AssertionError</failure></testcase><testcase classname="test_py1.TestMy" name="test_add2" time="0.000" /><testcase classname="test_py1.TestMy" name="test_subtract" time="0.000" /></testsuite></testsuites>
